@@ -11,5 +11,16 @@ const puppeteer = require("puppeteer");
   await page.keyboard.type("풀스택");
   await page.keyboard.press("Enter");
 
+  await page.waitForNavigation();
+
+  let infiniteScrollInterval = setInterval(async () => {
+    await page.evaluate(() => {
+      window.scrollBy(0, window.innerHeight);
+    });
+  }, 1000);
+
+  setTimeout(() => {
+    clearInterval(infiniteScrollInterval);
+  }, 3000);
   //   await browser.close();
 })();
