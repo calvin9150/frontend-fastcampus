@@ -53,6 +53,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="./js/main.js"></script>
   </head>
   <body>
@@ -437,7 +443,34 @@
         <div class="inner">
           <div class="inner__left">
             <h2>공지사항</h2>
-            <div class="swiper-container"></div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="javacript:void(0)">
+                    크리스마스 & 연말연시 스타벅스 매장 영업시간
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javacript:void(0)">
+                    [당첨자 발표] 2021 플래너 영수증 당첨자 발표
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javacript:void(0)">
+                    스타벅스코리아 어플리케이션 버전 업데이트
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="javacript:void(0)">
+                    [우승자 발표] 뉴이어 앗쌀람마이쿰 커피 원샷 드링킹 이벤트
+                    우승자 발표
+                  </a>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
             <a href="javacript:void(0)" class="notice-line__more">
               <div class="material-icons">add_circle</div>
             </a>
