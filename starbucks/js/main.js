@@ -22,9 +22,9 @@ window.addEventListener(
   _.throttle(() => {
     console.log(window.scrollY);
     if (window.scrollY > 500) {
-      gsap.to(badgeEl, 0.5, { opacity: 0, display: "none" });
+      gsap.to(badgeEl, 0.4, { opacity: 0, display: "none" });
     } else {
-      gsap.to(badgeEl, 0.5, { opacity: 1, display: "block" });
+      gsap.to(badgeEl, 0.4, { opacity: 1, display: "block" });
     }
   }, 300)
 );
