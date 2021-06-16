@@ -16,6 +16,7 @@ searchInputEl.addEventListener("blur", () => {
 });
 
 const badgeEl = document.querySelector("header .badges");
+const toTopEl = document.querySelector("#to-top");
 
 window.addEventListener(
   "scroll",
@@ -23,11 +24,25 @@ window.addEventListener(
     console.log(window.scrollY);
     if (window.scrollY > 500) {
       gsap.to(badgeEl, 0.4, { opacity: 0, display: "none" });
+      // 스크롤버튼 등장
+      gsap.to(toTopEl, 0.2, {
+        x: 0,
+      });
     } else {
       gsap.to(badgeEl, 0.4, { opacity: 1, display: "block" });
+      // 스크롤버튼 숨기기
+      gsap.to(toTopEl, 0.2, {
+        x: 100,
+      });
     }
   }, 300)
 );
+
+toTopEl.addEventListener("click", () => {
+  gsap.to(window, 0.7, {
+    scrollTo: 0,
+  });
+});
 
 const fadeEls = document.querySelectorAll(".visual .fade-in");
 fadeEls.forEach((fadeEl, index) => {
