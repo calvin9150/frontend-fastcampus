@@ -1,5 +1,9 @@
+import { useSelector } from "react-redux";
+
 export default function DoneList() {
-  const list = [];
+  const list = useSelector((state) => state.todo.list).filter(
+    (item) => item.done
+  );
 
   return (
     <section>

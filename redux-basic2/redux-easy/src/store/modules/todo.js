@@ -16,10 +16,10 @@ export function create(payload) {
   };
 }
 
-export function done(key) {
+export function done(id) {
   return {
     type: DONE,
-    key,
+    id,
   };
 }
 
